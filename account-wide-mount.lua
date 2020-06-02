@@ -394,7 +394,6 @@ function accountMount.learnMount(player)
                 if (pLevel >= y[1] and player:HasSpell(x)) then
                     if ((pHorde == false and y[0] == 0) or (pHorde == false and y[0] == 1)) then
                         player:LearnSpell(x)
-                        break
                     elseif ((pHorde == true and y[0] == 0) or (pHorde == false and y[0] == 2)) then
                         player:LearnSpell(x)
                     end
@@ -447,7 +446,7 @@ function accountMount.setMount(event, player)
     local pLevel = player:GetLevel()
 
     if (pLevel >= 20) then
-        if (accountMount.newSpells[pAccId]) then
+        if (accountMount.newSpells[pGuid]) then
             for k, v in pairs(accountMount.newSpells[pGuid]) do
                 local setAccountMount =
                     CharDBQuery(
@@ -455,7 +454,6 @@ function accountMount.setMount(event, player)
                         accountMount.Config.dbName .. "`.`account_mount_link` VALUES (" .. pAccId .. ", " .. v .. ")"
                 )
                 accountMount.newSpells[pGuid] = nil
-                break
             end
         end
     end
@@ -484,6 +482,7 @@ function accountMount.onLearnSpell(event, packet, player)
     if ((spellId == 33388) or (spellId == 34091) or (spellId == 34090)) then
         accountMount.learnMount(player)
     end
+    return packet;
 end
 RegisterPacketEvent(299, 7, accountMount.onLearnSpell)
 
