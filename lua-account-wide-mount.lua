@@ -31,7 +31,7 @@ local accountMount = {}
 
 accountMount.Config = {
     -- DB Name .. so easy
-    dbName = "ac_eluna"
+    dbName = "r1_eluna"
 }
 
 accountMount.Spells = {
@@ -244,7 +244,6 @@ accountMount.Spells = {
     [581] = {40, 0}, --	Neutral
     [579] = {40, 0}, --	Neutral
     [42777] = {40, 0}, --	Neutral
-    [42777] = {40, 0}, --	Neutral
     [65637] = {40, 1}, --	Alliance
     [578] = {40, 0}, --	Neutral
     [43900] = {40, 0}, --	Neutral
@@ -453,7 +452,22 @@ function accountMount.setMount(event, player)
                     "INSERT INTO `" ..
                         accountMount.Config.dbName .. "`.`account_mount_link` VALUES (" .. pAccId .. ", " .. v .. ")"
                 )
-                accountMount.newSpells[pGuid] = nil
+            end
+            accountMount.newSpells[pGuid] = nil
+        else
+            for z, y in pairs(accountMount.Spells) do
+                for k, v in pairs(accountMount[pAccId]) do
+                    if (z ~= v) then
+                        if (player:HasSpell(z) == true) then
+                            local setAccountMount =
+                                CharDBQuery(
+                                "INSERT IGNORE INTO `" ..
+                                    accountMount.Config.dbName ..
+                                        "`.`account_mount_link` VALUES (" .. pAccId .. ", " .. z .. ")"
+                            )
+                        end
+                    end
+                end
             end
         end
     end
@@ -482,7 +496,7 @@ function accountMount.onLearnSpell(event, packet, player)
     if ((spellId == 33388) or (spellId == 34091) or (spellId == 34090)) then
         accountMount.learnMount(player)
     end
-    return packet;
+    return packet
 end
 RegisterPacketEvent(299, 7, accountMount.onLearnSpell)
 
