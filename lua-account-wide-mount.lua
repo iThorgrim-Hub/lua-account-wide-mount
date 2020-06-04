@@ -40,11 +40,8 @@ accMount.Config = {
 
 accMount.Account = {};
 
-CharDBExecute(
-    "CREATE TABLE IF NOT EXISTS `" ..
-        accMount.Config.dbname ..
-            "`.`account_mount` ( `accountid` INT(10) NOT NULL, `spell` INT(10), PRIMARY KEY (`accountid`, `spellid`));"
-)
+CharDBExecute("CREATE TABLE IF NOT EXISTS `" ..accMount.Config.dbname.."`.`account_mount` ( `accountid` INT(10) NOT NULL, `spell` INT(10), PRIMARY KEY (`accountid`, `spell`));")
+
 
 function accMount.setLearn(player)
   local pAcc = player:GetAccountId();
