@@ -13,15 +13,13 @@
 
 
 
-  @Original_Author : Open-Wow
+  @Original_Author : iThorgrimHub
 
   This script allow player to learn mount on connect, levelup.
 
   @Open-Wow Github : https://github.com/Open-Wow
-  @Open-Wow Site : https://open-wow.fr
 
   @AzerothCore Community : https://discord.gg/PaqQRkd
-  @Open-Wow Community : https://discord.gg/mTHxKmY
 
   Thanks for your patience <3.
 
