@@ -49,13 +49,13 @@ function accMount.setLearn(player)
     if (player:HasSpell(33388)) then
       for pkey, pvalue in pairs(accMount.Account[pAcc]) do
         if (value[1] == 20) then
-          if (player:isHorde() == false and value[1] == 0 or player:isHorde() == false and value[1] == 1) then
+          if (player:IsHorde() == false and value[1] == 0 or player:IsHorde() == false and value[1] == 1) then
             if (key == pvalue) then
               if (player:HasSpell(pvalue) == false) then
                 player:LearnSpell(pvalue);
               end
             end
-          elseif (player:isHorde() == true and value[1] == 0 or player:isHorde() == true and value[1] == 2) then
+          elseif (player:IsHorde() == true and value[1] == 0 or player:IsHorde() == true and value[1] == 2) then
             if (key == pvalue) then
               if (player:HasSpell(pvalue) == false) then
                 player:LearnSpell(pvalue);
@@ -69,13 +69,13 @@ function accMount.setLearn(player)
     if (player:HasSpell(33388)) then
       for pkey, pvalue in pairs(accMount.Account[pAcc]) do
         if (value[1] == 30) then
-          if (player:isHorde() == false and value[1] == 0 or player:isHorde() == false and value[1] == 1) then
+          if (player:IsHorde() == false and value[1] == 0 or player:IsHorde() == false and value[1] == 1) then
             if (key == pvalue) then
               if (player:HasSpell(pvalue) == false) then
                 player:LearnSpell(pvalue);
               end
             end
-          elseif (player:isHorde() == true and value[1] == 0 or player:isHorde() == true and value[1] == 2) then
+          elseif (player:IsHorde() == true and value[1] == 0 or player:IsHorde() == true and value[1] == 2) then
             if (key == pvalue) then
               if (player:HasSpell(pvalue) == false) then
                 player:LearnSpell(pvalue);
@@ -89,13 +89,13 @@ function accMount.setLearn(player)
     if (player:HasSpell(33391)) then
       for pkey, pvalue in pairs(accMount.Account[pAcc]) do
         if (value[1] == 40) then
-          if (player:isHorde() == false and value[1] == 0 or player:isHorde() == false and value[1] == 1) then
+          if (player:IsHorde() == false and value[1] == 0 or player:IsHorde() == false and value[1] == 1) then
             if (key == pvalue) then
               if (player:HasSpell(pvalue) == false) then
                 player:LearnSpell(pvalue);
               end
             end
-          elseif (player:isHorde() == true and value[1] == 0 or player:isHorde() == true and value[1] == 2) then
+          elseif (player:IsHorde() == true and value[1] == 0 or player:IsHorde() == true and value[1] == 2) then
             if (key == pvalue) then
               if (player:HasSpell(pvalue) == false) then
                 player:LearnSpell(pvalue);
@@ -109,13 +109,13 @@ function accMount.setLearn(player)
     if (player:HasSpell(34090)) then
       for pkey, pvalue in pairs(accMount.Account[pAcc]) do
         if (value[1] == 60) then
-          if (player:isHorde() == false and value[1] == 0 or player:isHorde() == false and value[1] == 1) then
+          if (player:IsHorde() == false and value[1] == 0 or player:IsHorde() == false and value[1] == 1) then
             if (key == pvalue) then
               if (player:HasSpell(pvalue) == false) then
                 player:LearnSpell(pvalue);
               end
             end
-          elseif (player:isHorde() == true and value[1] == 0 or player:isHorde() == true and value[1] == 2) then
+          elseif (player:IsHorde() == true and value[1] == 0 or player:IsHorde() == true and value[1] == 2) then
             if (key == pvalue) then
               if (player:HasSpell(pvalue) == false) then
                 player:LearnSpell(pvalue);
@@ -129,13 +129,13 @@ function accMount.setLearn(player)
     if (player:HasSpell(34091)) then
       for pkey, pvalue in pairs(accMount.Account[pAcc]) do
         if (value[1] == 70) then
-          if (player:isHorde() == false and value[1] == 0 or player:isHorde() == false and value[1] == 1) then
+          if (player:IsHorde() == false and value[1] == 0 or player:IsHorde() == false and value[1] == 1) then
             if (key == pvalue) then
               if (player:HasSpell(pvalue) == false) then
                 player:LearnSpell(pvalue);
               end
             end
-          elseif (player:isHorde() == true and value[1] == 0 or player:isHorde() == true and value[1] == 2) then
+          elseif (player:IsHorde() == true and value[1] == 0 or player:IsHorde() == true and value[1] == 2) then
             if (key == pvalue) then
               if (player:HasSpell(pvalue) == false) then
                 player:LearnSpell(pvalue);
